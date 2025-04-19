@@ -63,6 +63,7 @@ const Manager = () => {
     // let req = await fetch("http://localhost:3000/")
     let req = await fetch("/")
     let passwords = await req.json();
+    console.log(passwords);  // Check the data here
     setpasswordArray(passwords)
   }
 
