@@ -60,7 +60,8 @@ const Manager = () => {
   const [passwordArray, setpasswordArray] = useState([])
 
   const getPasswords = async () => {
-    let req = await fetch("http://localhost:3000/")
+    // let req = await fetch("http://localhost:3000/")
+    let req = await fetch("/")
     let passwords = await req.json();
     setpasswordArray(passwords)
   }
@@ -85,14 +86,16 @@ const Manager = () => {
       let newPassword = { ...form, id: form.id || uuidv4() };
 
       if (form.id) {
-        await fetch("http://localhost:3000/", {
+        // await fetch("http://localhost:3000/", {
+          await fetch("/", {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: form.id }),
         });
       }
 
-      await fetch("http://localhost:3000/", {
+      // await fetch("http://localhost:3000/", {
+        await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPassword),
@@ -119,7 +122,8 @@ const Manager = () => {
     let c = confirm("Do you really want to delete this password")
     if (c) {
       setpasswordArray(passwordArray.filter(item => item.id !== id))
-      let res = await fetch("http://localhost:3000/", {
+      // let res = await fetch("http://localhost:3000/", {
+        let res = await fetch("/", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id })
