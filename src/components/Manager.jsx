@@ -61,7 +61,7 @@ const Manager = () => {
 
   const getPasswords = async () => {
     // let req = await fetch("http://localhost:3000/")
-    let req = await fetch("/")
+    let req = await fetch("https://passwordmanager-mongo.onrender.com/")
     let passwords = await req.json();
     console.log(passwords);  // Check the data here
     setpasswordArray(passwords)
@@ -88,7 +88,7 @@ const Manager = () => {
 
       if (form.id) {
         // await fetch("http://localhost:3000/", {
-          await fetch("/", {
+          await fetch("https://passwordmanager-mongo.onrender.com/", {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: form.id }),
@@ -96,7 +96,7 @@ const Manager = () => {
       }
 
       // await fetch("http://localhost:3000/", {
-        await fetch("/", {
+        await fetch("https://passwordmanager-mongo.onrender.com/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPassword),
@@ -124,7 +124,7 @@ const Manager = () => {
     if (c) {
       setpasswordArray(passwordArray.filter(item => item.id !== id))
       // let res = await fetch("http://localhost:3000/", {
-        let res = await fetch("/", {
+        let res = await fetch("https://passwordmanager-mongo.onrender.com/", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id })
