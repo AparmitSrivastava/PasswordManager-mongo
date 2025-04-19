@@ -48,7 +48,7 @@
 
 
 
-  
+
 import React from 'react'
 import { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
@@ -223,7 +223,7 @@ const Manager = () => {
                   ref={ref}
                   className="mr-2 mt-[3px] hover:cursor-pointer"
                   width={20}
-                  src="public/icons/eye.png"
+                  src="/icons/eye.png"
                   alt="eye"
                 />
               </span>
