@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+
+@layer components {
+    .mycontainer{   
+        @apply container px-50 py-10 mx-auto;
+    }
+}
+
+/* this is now a utility class and can now be used anywhere even in navbar.jsx*/
