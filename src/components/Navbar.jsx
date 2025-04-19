@@ -32,7 +32,7 @@ const Navbar = () => {
 
           
           <button className='flex justify-between items-center gap-3 bg-purple-200 rounded-2xl p-1 border-3 border-black'onClick={openGitHub}>
-            <img src="public/icons/github.svg" alt="" className='w-8' />
+            <img src="/icons/github.svg" alt="" className='w-8' />
             <span className='font-bold text-green-700'>GitHub</span>
           </button>
 
