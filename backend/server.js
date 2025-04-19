@@ -144,7 +144,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // CORS setup - restrict to your frontend URL
-const allowedOrigins = ['https://password-manager-mongo.vercel.app'];  // Your Vercel frontend URL
+const allowedOrigins = ['https://password-manager-mongo.vercel.app', 'https://password-manager-mongo-1hfkefnxq-aparmitsrivastavas-projects.vercel.app'];  // Your Vercel frontend URL
 const corsOptions = {
   origin: allowedOrigins,
   methods: ['GET', 'POST', 'DELETE'],
